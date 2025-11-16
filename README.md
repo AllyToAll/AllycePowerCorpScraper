@@ -1,5 +1,7 @@
 # Allyce Power Corporations Scraper
 
+For use with https://oppress.games/power/
+
 ## Overview
 
 The example snippets provided are in Bash, thus if your terminal uses a different shell you may need to adapt them.
