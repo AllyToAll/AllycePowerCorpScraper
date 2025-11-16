@@ -38,6 +38,10 @@ The output is
     - O: `=if(D2>0,C2/D2,)`
         - Price / Ask
 
+# Example
+
+Want to see my example?
+
 # Installation
 
 ## Overview
