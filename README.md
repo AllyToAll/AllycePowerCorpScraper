@@ -42,9 +42,7 @@ The output is
 
 Want to see my examples? Expect an output such as following if you follow my instructions and copy my formulae
 
-https://allytoall.github.io/income
-
-https://allytoall.github.io/prices
+https://allytoall.github.io/apcs
 
 # Installation
 
