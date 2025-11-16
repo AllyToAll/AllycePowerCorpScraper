@@ -2,6 +2,44 @@
 
 For use with https://oppress.games/power/
 
+# Data output
+
+The output is
+
+- Name
+    - The name of the corporation
+- Shares Owned
+    - How many shares you own
+- Price
+    - Price per share
+- Ask
+    - Price per share *offered by a player*
+- Total Shares
+    - Total amount of shares
+- Income
+    - Profit of the corporation (Revenue - Expenses)
+- Dividend%
+    - Dividend% paid by the corporation
+- For my own spreadsheets columns H to O I fill with the following:
+    - H: `=if(and(E2>0,C2>0),if((G2*F2*0.8)/(E2*C2)>0,(G2*F2*0.8)/(E2*C2),),)`
+        - Dividend% * Income * 0.8 / (Total Shares * Price)
+    - I: `=if(and(D2>0,G2>0),(G2*F2*0.8)/(E2*D2),)`
+        - Dividend% * Income * 0.8 / (Total Shares * Ask)
+    - J: `=if(E2>0,if((G2*F2*0.8)/E2>0,(G2*F2*0.8)/E2,),)`
+        - Dividend% * Income * 0.8 / Total Shares
+    - K: `=if(B2*J2/24>0,B2*J2/24,)`
+        - Shares Owned * (Dividend% * Income * 0.8 / Total Shares) / 24
+    - L: `=if(and(D2>0,$P$2>0), if(floor($P$2/D2,1)>0, floor($P$2/D2,1), ""), "")`
+        - Money / Ask
+    - M: `=if(max(C2,D2)*B2>0,max(C2,D2)*B2,)`
+        - Price or Ask * Shares Owned
+    - N: `=if(C2>0,D2/C2,)`
+        - Ask / Price
+    - O: `=if(D2>0,C2/D2,)`
+        - Price / Ask
+
+# Installation
+
 ## Overview
 
 The example snippets provided are in Bash, thus if your terminal uses a different shell you may need to adapt them.
