@@ -2,6 +2,12 @@ import gspread
 from google.oauth2.service_account import Credentials
 
 
+def clear_extra_rows(sheet, next_row, max_row):
+    if next_row <= max_row:
+        clear_range = f"A{next_row}:G{max_row}"
+        sheet.batch_clear([clear_range])
+
+
 class GoogleSheetsPipeline:
 
     def open_spider(self, spider):
@@ -52,3 +58,5 @@ class GoogleSheetsPipeline:
         if hasattr(spider, "current_capital"):
             self.sheet1.update("P2", [[spider.current_capital]])
             self.sheet2.update("P2", [[spider.current_capital]])
+        clear_extra_rows(self.sheet1, self.row1, 100)
+        clear_extra_rows(self.sheet2, self.row2, 100)

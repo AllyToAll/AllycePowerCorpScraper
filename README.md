@@ -45,7 +45,8 @@ https://allytoall.github.io/apcs
 
 # Important settings to change
 
-Currently in `settings.py` you will see
+Currently in [settings.py](https://github.com/AllyToAll/AllycePowerCorpScraper/blob/master/scraper/settings.py) you will
+see
 
 ```python
 DOWNLOAD_DELAY = 45
@@ -78,16 +79,15 @@ If instead you know how to execute it in Powershell or whatever else you're usin
 
 On Windows for example the default shell is not in `Bash` but in `Powershell`.
 
-Thus you will need `Git Bash` from `Git-SCM` from https://git-scm.com/install/
+Thus you will need `Git Bash` from [Git-SCM](https://git-scm.com/install/)
 
 ### Python
 
 If you already have this set up, skip this step
 
-You will also need Python installed. You can download it from https://www.python.org/downloads/
+You will also need [Python](https://www.python.org/downloads/) installed.
 
-Ensure Python is added to path,
-see https://packaging.python.org/en/latest/tutorials/installing-packages/#ensure-you-can-run-python-from-the-command-line
+[Ensure Python is added to path](https://packaging.python.org/en/latest/tutorials/installing-packages/#ensure-you-can-run-python-from-the-command-line).
 
 #### Python Virtual Environment
 
@@ -113,8 +113,8 @@ Or proceeed commands that need the venv with `./.venv/bin/python -m` and not hav
 ### Python Dependencies (pip)
 
 You may need to install dependencies. And this will depend on your specific system and so on, but for most people this
-is by pip.
-See https://packaging.python.org/en/latest/tutorials/installing-packages/#ensure-you-can-run-pip-from-the-command-line
+is by
+pip. [Ensure pip is added to path](https://packaging.python.org/en/latest/tutorials/installing-packages/#ensure-you-can-run-pip-from-the-command-line).
 
 If pip is installed, you can then install the dependencies with
 
@@ -127,16 +127,18 @@ pip install -r requirements.txt
 #### Credentials.json
 
 This scraper was designed to upload its results to Google Sheets, thus you may need to set up Google Sheets API access
-and download the `credentials.json` file from Google Cloud Console, I used a Service Account but if you want to modify
+and download the `credentials.json` file from Google Cloud Console, I used
+a [Service Account](https://developers.google.com/workspace/guides/create-credentials#service-account) but if you want
+to modify
 and use something else be my guest.
-See https://developers.google.com/workspace/guides/create-credentials#service-account
 
-This file should be placed in the same directory as this `README.md file`.
+This file should be placed in the same directory as
+this [README.md](https://github.com/AllyToAll/AllycePowerCorpScraper/blob/master/README.md) file.
 
 #### Cookies.json
 
 This scraper requires cookies to access the data, this should be in the form of a `cookies.json` file placed in the same
-directory as this `README.md` file.
+directory as this [README.md](https://github.com/AllyToAll/AllycePowerCorpScraper/blob/master/README.md) file.
 
 It should look something like this:
 
@@ -156,7 +158,8 @@ The Google Sheets API is expected a Spreadsheet named `Power` with 2 sheets name
 ### Cookies
 
 You must provide cookies to the scraper to access the data. You can do this by exporting cookies from your browser, and
-entering them in settings.py file in the `COOKIES` variable as a dictionary.
+entering them in [settings.py](https://github.com/AllyToAll/AllycePowerCorpScraper/blob/master/scraper/settings.py) file
+in the `COOKIES` variable as a dictionary.
 
 I have placed dummy text in place to help, simply replace it.
 
