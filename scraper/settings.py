@@ -1,9 +1,9 @@
-COOKIES = {
-    "cf_clearance": "A VERY LONG PIECE OF DATA",
-    "erfereddde2": "some numbers",
-    "gtrgioajorgjap": "some numbers",
-    "PHPSESSID": "a mix",
-}
+import json
+import os
+
+cookies_path = os.getenv("COOKIES_FILE", "cookies.json")
+with open(cookies_path) as f:
+    COOKIES = json.load(f)
 
 
 BOT_NAME = "opp_scraper"

@@ -104,12 +104,32 @@ pip install -r requirements.txt
 
 ### Google Sheets
 
+#### Credentials.json
+
 This scraper was designed to upload its results to Google Sheets, thus you may need to set up Google Sheets API access
 and download the `credentials.json` file from Google Cloud Console, I used a Service Account but if you want to modify
 and use something else be my guest.
 See https://developers.google.com/workspace/guides/create-credentials#service-account
 
 This file should be placed in the same directory as this `README.md file`.
+
+#### Cookies.json
+
+This scraper requires cookies to access the data, this should be in the form of a `cookies.json` file placed in the same
+directory as this `README.md` file.
+
+It should look something like this:
+
+```json
+{
+  "cf_clearance": "<your_cf_clearance_cookie_here>",
+  "erfereddde2": "<some numbers>",
+  "gtrgioajorgjap": "<more numbers>",
+  "PHPSESSID": "<your_phpsessid_cookie_here>"
+}
+```
+
+#### Google Sheets Setup
 
 The Google Sheets API is expected a Spreadsheet named `Power` with 2 sheets named `Prices` and `Income`
 
