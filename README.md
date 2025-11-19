@@ -180,3 +180,4 @@ Or if the venv is not activated.
 ## Issues I am aware of:
 
 - Money is not correctly scraped from your account. It is entered as 0 in field P2.
+- GitHub Actions workflow will attempt to run periodically but will fail.
