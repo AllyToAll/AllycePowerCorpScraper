@@ -37,12 +37,32 @@ The output is
         - Ask / Price
     - O: `=if(D2>0,C2/D2,)`
         - Price / Ask
-
 # Example
 
 Want to see my examples? Expect an output such as following if you follow my instructions and copy my formulae
 
 https://allytoall.github.io/apcs
+
+# Important settings to change
+
+Currently in `settings.py` you will see
+
+```python
+DOWNLOAD_DELAY = 45
+# DOWNLOAD_DELAY = 1.5
+```
+
+This is intentional to delay requests to around 1 every
+45 seconds to reduce stress on the Power servers since it uses an automated flow.
+
+But if you're running this locally I recommend you change it to
+
+```python
+# DOWNLOAD_DELAY = 45
+DOWNLOAD_DELAY = 1.5
+```
+
+Instead, otherwise each run will take hours.
 
 # Installation
 
