@@ -177,7 +177,29 @@ Or if the venv is not activated.
 ./.venv/bin/python -m scrapy crawl corporations
 ```
 
+# Using GitHub Actions
+
+You can see I use GitHub Actions with
+a [workflow](https://github.com/AllyToAll/AllycePowerCorpScraper/blob/master/.github/workflows/workflow.yml), to make
+this work you must get your `credentials.json` and `cookies.json`.
+
+For the `cookies.json` remove all white space and newlines such as below, leave the `credentials.json` as is
+
+```json
+{
+  "cf_clearance": "<your_cf_clearance_cookie_here>",
+  "erfereddde2": "<some numbers>",
+  "gtrgioajorgjap": "<more numbers>",
+  "PHPSESSID": "<your_phpsessid_cookie_here>"
+}
+```
+
+Convert both files to Base64
+
+Save this output into GitHub Secrets as `GOOGLE_CREDS` and `OPPRESS_COOKIES` respectively.
+
+Then using my workflow, it will pick them up and run the scraper on a schedule every 6 hours.
+
 ## Issues I am aware of:
 
 - Money is not correctly scraped from your account. It is entered as 0 in field P2.
-- GitHub Actions workflow will attempt to run periodically but will fail.
